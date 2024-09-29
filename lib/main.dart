@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:student_panel_redesign/home.dart';
-import 'package:student_panel_redesign/value.dart';
+import 'package:student_panel_redesign/redesign.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -36,9 +37,11 @@ class MyApp extends StatelessWidget {
 
       ),
       debugShowCheckedModeBanner: false,
-      home:home(),
+      home:redesign(),
     );
   }
+
+
 }
 
 class MyHomePage extends StatefulWidget {
