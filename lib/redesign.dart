@@ -161,6 +161,7 @@ class _redesignState extends State<redesign> {
                             children: [
                               WidgetSpan(child: Icon(Icons.local_fire_department_rounded),
                               alignment: PlaceholderAlignment.middle,
+                                
                               ),
                               TextSpan(
                                 text:" Current Courses",
@@ -194,66 +195,65 @@ class _redesignState extends State<redesign> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(21,0,21,21),
                   child: AnimatedContainer(
-                    duration: const Duration(milliseconds:555),
-                    child: Container(
-                      height: seeAllCourses? size.width *0.55:size.width*0.31,
-                      width: size.width,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(35),
-                        color: Colors.grey.shade300,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(21.0),
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Course Code",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: size.width *.043,
-                                    ),
+                    duration: const Duration(milliseconds:355),
+                    curve: Curves.easeOut,
+                    height: seeAllCourses? size.width *0.55:size.width*0.31,
+                    width: size.width,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(35),
+                      color: Colors.grey.shade300,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(21.0),
+                      child: SingleChildScrollView(
+                        // scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Course Code",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size.width *.043,
                                   ),
-                                  Column(
-                                    children: generateCourseUI(codes, size),
-                                  )
-                                  // for(int i=0;i<codes.length;i++)
-                                  //   Text(codes[i],
-                                  //     style: TextStyle(
-                                  //
-                                  //       fontSize: size.width *.035,
-                                  //     ),
-                                  //   ),
-                                ],
-                              ),
-                              SizedBox(width: 81,),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Course Name",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: size.width *.043,
-                                    ),
+                                ),
+                                Column(
+                                  children: generateCourseUI(codes, size),
+                                )
+                                // for(int i=0;i<codes.length;i++)
+                                //   Text(codes[i],
+                                //     style: TextStyle(
+                                //
+                                //       fontSize: size.width *.035,
+                                //     ),
+                                //   ),
+                              ],
+                            ),
+                            SizedBox(width: 81,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Course Name",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size.width *.043,
                                   ),
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: generateCourseUI(names, size),
-                                  )
-                                  // for(int i=0;i<names.length;i++)
-                                  //   Text(names[i],
-                                  //     style: TextStyle(
-                                  //
-                                  //       fontSize: size.width *.035,
-                                  //     ),
-                                  //   ),
-                                ],
-                              )
-                            ],
-                          ),
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: generateCourseUI(names, size),
+                                )
+                                // for(int i=0;i<names.length;i++)
+                                //   Text(names[i],
+                                //     style: TextStyle(
+                                //
+                                //       fontSize: size.width *.035,
+                                //     ),
+                                //   ),
+                              ],
+                            )
+                          ],
                         ),
                       ),
                     ),
